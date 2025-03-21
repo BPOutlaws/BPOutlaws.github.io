@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="en-us">
+<head>
+    <script src="utils.js"></script>
+    <script src="libra.js"></script>
+    <script>pragma("Libra", "1.5");</script>
+</head>
+
+<body>
+<div id="body"><table>
+    <tr><td>
+
+        <!-- input -->
+        <label for="input">Input</label>
+
+        <!-- clear -->
+        <div class="hright">
+            <label for="clear_input">Clear</label>
+            <button type="button" id="clear_input" onclick="clear_box('input')"></input>
+        </div>
+        
+        <!-- input box -->
+        <div class="td_textarea">
+            <textarea id="input" rows="6" onfocus="this.select()"></textarea>
+        </div>
+
+    </td></tr>
+    <tr><td>
+    
+        <!-- key -->
+        <label for="key">Key</label>
+        
+        <!-- clear -->
+        <div class="hright">
+            <label for="clear_key">Clear</label>
+            <button type="button" id="clear_key" onclick="clear_box('key')"></input>
+        </div>
+        
+        <!-- key box -->
+        <input id="key" rows="1" onfocus="this.select()"></input>
+
+    </td></tr>
+    <tr><td>
+        
+        <!-- clear -->
+        <div class="hright">
+            <label for="clear_output">Clear</label>
+            <button type="button" id="clear_output" onclick="clear_box('output')"></input>
+        </div>
+        
+        <!-- encrypt -->
+        <div class="hleft">
+            <label for="encrypt">Encrypt</label>
+            <button type="button" id="encrypt" onclick="encrypt()"></button>
+        </div>
+
+        <!-- decrypt -->
+        <div class="hcenter">
+            <label for="decrypt">Decrypt</label>
+            <button type="button" id="decrypt" onclick="decrypt()"></button>
+        </div>
+
+        <!-- output box -->
+        <div class="td_textarea">
+            <textarea id="output" rows="14" onfocus="this.select()"></textarea>
+        </div>
+
+    </td></tr>
+    <tr><td>
+
+        <!-- clear all -->
+        <div class="hright">
+            <label for="clear_all">Reload</label>
+            <button type="button" id="clear_all"
+                onclick="reload()"
+            ></input>
+        </div>
+        
+        <div id="version"></div>
+    
+    </td></tr>
+</table></div>
+
+<script>
+    main();
+</script>
+
+</body>
+</html>

@@ -1,0 +1,85 @@
+:root {
+    --bg:          rgb( 10,  20,  40);
+    --default:     rgb( 20, 140, 180);
+    --accent:      rgb( 20, 180, 140);
+
+    --interactive: rgb( 20, 225, 180);
+    --hover:       rgb( 40, 255, 255);
+    --interacted:  var(--accent);
+    
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1em;
+    line-height: 1.5em;
+    background-color: var(--bg);
+    color: var(--default);
+
+    box-sizing: border-box;
+    user-select: none;
+    touch-action: manipulation;
+
+    -webkit-tap-highlight-color: transparent;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+}
+
+/* debug */
+@-moz-document url-prefix() {
+    html {
+        scrollbar-width: none;
+    }
+}
+
+body {
+    touch-action: none;
+    -webkit-overflow-scrolling: none;
+    overflow: hidden;
+    overscroll-behavior: none;
+}
+
+table {
+    border-collapse: collapse;
+    padding: 200px;
+    width: 90%;
+    max-width: 400px;
+    
+    margin-left: auto;
+    margin-right: auto;
+}
+
+label:hover, input:hover, textarea:hover {
+    color: var(--hover);
+}
+
+input:focus, textarea:focus {
+    outline: none !important;
+    border-color: var(--hover);
+}
+
+button {
+    display: none;
+}
+
+textarea, input {
+    border-color: var(--default);
+    background-color: var(--bg);
+    color: var(--default);
+    width: 99%;
+    resize: none;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 1em;
+}
+
+.hleft {
+    float: left;
+}
+
+.hright {
+    float: right;
+}
+
+.hcenter {
+    text-align: center;
+    margin: 0 auto;
+    width: 100px;
+}
